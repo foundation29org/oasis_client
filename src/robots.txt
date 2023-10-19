@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.oasisgpt.azurewebsites.net/sitemap.xml

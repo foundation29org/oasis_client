@@ -1,0 +1,70 @@
+<!--Footer Starts-->
+<footer>
+    <div class="container-fluid" style="background-color: #353540 !important;">
+        <div class="white p-2 mb-0 d-block">
+            <div class="center-elements pb-2 bodyfooter">
+              <span class="mt-1 createdby" style="flex: 1;">{{'generics.Created by' | translate }} <a href="https://www.foundation29.org" class="text-decoration-underline" target="_blank">Foundation
+                29</a></span>
+                <div class="mt-1" style="flex: 1;">
+                  <span>{{'land.Subscribe or send us a message' | translate }}</span>
+                  <button class="mt-0 btn btn-info round mb-0 ml-2 btn-sm"
+                    (click)="openSupport(contentSubs);"><strong>{{'generics.Send' | translate
+                      }}</strong></button>
+                </div>
+              
+              
+            </div>
+            
+            <div class="center-elements white border-top mt-2 pt-3 pb-3 d-md-none">
+                <a *ngIf="!isHomePage" class="mr-2 text-decoration-underline" routerLink="/.">
+                    <span>{{'menu.Dashboard' | translate }}</span>
+                  </a>
+              <a *ngIf="!isAboutPage" class="mr-2 text-decoration-underline" routerLink="/aboutoasisgpt">
+                <span>{{'menu.About us' | translate }}</span>
+              </a>
+              <a *ngIf="!isF29AboutPage" class="mr-2 text-decoration-underline" routerLink="/aboutf29">
+                <span>{{'menu.About f29' | translate }}</span>
+              </a>
+            </div>
+        
+          </div>
+
+    </div>
+</footer>
+<!--Footer Ends-->
+
+<ng-template #contentSubs let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">{{'generics.OasisGPT Support' | translate }}</h4>
+    </div>
+    <div class="modal-body">
+      <form class="form" #f="ngForm">
+        <div class="form-group">
+          <span>{{'support.Message' | translate }}</span>
+          <div>
+            <textarea #autoajustable id="textarea1" type="text" name="msgfeedBack"
+              class="autoajustable searchTerm form-control data-hj-allow" style="width: 100%;" ngModel required #msgfeedBackRef="ngModel" [(ngModel)]="msgfeedBack"
+              (ngModelChange)="resizeTextArea()"></textarea>
+              <small class="danger" *ngIf="!msgfeedBackRef.valid && showErrorForm">{{'generics.required' | translate
+              }}</small>
+          </div>
+        </div>
+        <div *ngIf="!sending" class="mt-2 col-md-12 center-elements">
+          <div *ngIf="f.valid;then formValid else formError"></div>
+          <button class="btn btn-secondary ml-1" type="button" (click)="closeSupport()">{{'generics.Cancel' | translate
+            }}</button>
+          <ng-template #formValid><button class="btn btn-info mr-1"
+              (click)="onSubmitRevolution();"><strong>{{'generics.Send' | translate }}</strong></button></ng-template>
+          <ng-template #formError><button class="btn btn-info mr-1" type="button"
+              (click)="submitInvalidForm()"><strong>{{'generics.Send' | translate }}</strong></button></ng-template>
+        </div>
+        <div class="form-actions col-md-12 center-elements" *ngIf="sending">
+          <span class=""><i class="fa fa-spinner fa-spin fa-3x fa-fw pink"></i></span>
+        </div>
+      </form>
+  
+  
+      <!--<span *ngIf="!fFeedbackDown.valid" class="form-text text-muted danger">{{'generics.requiredfieldsmissing' | translate
+        }}</span>-->
+    </div>
+  </ng-template>

@@ -1,0 +1,114 @@
+<section style="padding-bottom: 70px !important;padding-top: 70px !important;">
+  <div class="col-12 justify-content-center" [ngClass]="{' d-flex': isIeOrEdge !== true}">
+    <div class="card-body" style="max-width: 1200px;">
+      <div class="row m-0">
+        <div class=" offset-md-2 col-md-8 justify-content-center align-items-center text-center" style="padding-top: 1.5rem;padding-right: 1.5rem;padding-left: 1.5rem;">
+          <h1 class="card-title text-bold-500">
+            {{'land.aboutUs.title' | translate }}
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>{{'land.aboutUs.p1' | translate }}</p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Qu’est-ce que GPT-4 ? 
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>GPT-4 est un type de modèle linguistique, c'est-à-dire un programme informatique capable de générer des textes en langage naturel à partir d'une entrée. Les modèles linguistiques sont formés sur de grandes quantités de données textuelles, telles que des livres, des articles, des publications sur les réseaux sociaux et des sites Web, pour apprendre les modèles et probabilités linguistiques. GPT-4 est l'un des modèles linguistiques les plus avancés à ce jour, car il peut générer des textes cohérents et diversifiés dans divers domaines et tâches, tels que rédiger des histoires, répondre à des questions, résumer des textes et traduire des langues. GPT-4 est basé sur une architecture de réseau neuronal appelée transformateur, qui lui permet de capturer les dépendances à longue portée et les relations complexes entre les mots et les phrases.</p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Quelles sont les limites du GPT-4 pour un usage médical?
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <ul>
+              <li>Qualité et quantité des données : GPT-4 est entraîné sur une énorme quantité de données textuelles, mais toutes ne sont pas pertinentes, précises ou fiables pour un usage médical. Par exemple, certaines données textuelles peuvent contenir des informations erronées, des biais, des erreurs ou des informations obsolètes susceptibles d'induire GPT-4 en erreur ou de compromettre ses performances. De plus, certaines maladies rares peuvent ne pas disposer de suffisamment de données textuelles pour entraîner suffisamment GPT-4, ce qui entraîne une faible couverture ou une faible confiance.</li>
+              <li>Questions éthiques et réglementaires : GPT-4 n'est pas un dispositif médical certifié ou autorisé et n'est pas destiné à remplacer les médecins humains ni à fournir des diagnostics définitifs. GPT-4 n'est qu'un outil qui fournit des suggestions pouvant fournir des hypothèses possibles basées sur des informations limitées. Par conséquent, l’utilisation du GPT-4 à des fins médicales peut soulever des problèmes éthiques et juridiques, tels que la confidentialité, le consentement, la responsabilité et la confiance. Les utilisateurs de GPT-4 doivent être conscients de ces problèmes et utiliser OasisGPT avec prudence et responsabilité.</li>
+              <li>Généralisation et adaptation : GPT-4 est un modèle linguistique à usage général, ce qui signifie qu'il peut générer des textes pour divers domaines et tâches, mais ne peut pas être spécialisé ou optimisé pour des domaines ou des tâches médicales spécifiques. Par exemple, GPT-4 peut ne pas être en mesure de capturer les nuances, la terminologie ou la logique du raisonnement médical, ou peut ne pas être en mesure de s'adapter aux différents contextes des patients, tels que l'âge, le sexe, l'origine ethnique ou les antécédents du médecin. Par conséquent, GPT-4 devra peut-être être ajusté ou personnalisé pour des situations ou applications médicales particulières, ce qui peut nécessiter des données, des ressources ou une expertise supplémentaires.</li>
+            </ul>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Comment ces limitations sont-elles gérées dans OasisGPT?
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <ul>
+              <li>Réduction des hallucinations et des réponses erronées : GPT-4 peut produire des hallucinations ou des réponses erronées, qui sont des textes qui ne sont pas étayés par des connaissances factuelles. Cela peut se produire parce que GPT-4 est formé avec un corpus de textes vaste et diversifié, qui peut contenir du bruit, des erreurs, des incohérences ou des biais. De plus, GPT-4 est basé sur un modèle probabiliste, ce qui signifie qu'il peut générer différentes sorties pour la même entrée, en fonction de la méthode d'échantillonnage et du paramètre de température. Par conséquent, l’utilisation du GPT-4 à des fins de diagnostic médical peut présenter des risques de résultats trompeurs ou inexacts. Pour réduire ces risques, OasisGPT utilise des techniques d'ingénierie rapide et à basse température. L'ingénierie rapide est le processus de conception des textes d'entrée et de sortie de GPT-4 pour obtenir la réponse souhaitée. Par exemple, OasisGPT utilise des préfixes, des mots-clés et un formatage technique pour guider GPT-4 afin de générer une liste de diagnostics différentiels, plutôt qu'un texte narratif. La basse température est un paramètre qui contrôle le caractère aléatoire de la sortie. En définissant une température basse, OasisGPT rend la sortie plus déterministe et cohérente, plutôt que diversifiée et créative. Cela peut aider à éviter les hallucinations ou les réponses erronées improbables ou invraisemblables. Cependant, une température basse peut également réduire la couverture ou la variété des résultats, ce qui peut conduire à manquer certains diagnostics rares ou complexes. Par conséquent, l'OasisGPT doit être utilisé comme un outil complémentaire, et non comme une source définitive, pour le diagnostic médical.</li>
+              <li>Gestion des entrées et des sorties d'informations : GPT-4 peut générer du texte qui n'est pas sûr, approprié ou pertinent par rapport au diagnostic médical, tel que des informations offensantes, sensibles ou personnelles. Cela peut être dû au fait que GPT-4 n’a pas été formé ou testé pour un diagnostic médical et qu’il n’est peut-être pas conscient des implications éthiques, juridiques ou sociales de ses résultats. Pour éviter ou atténuer ces problèmes, OasisGPT utilise des techniques de gestion d'entrée et de sortie d'informations. La gestion des entrées est le processus de filtrage, de nettoyage ou d'anonymisation des données d'entrée pour protéger la confidentialité et la sécurité des patients. Par exemple, OasisGPT n'accepte aucune information personnelle identifiable, telle que des noms, des adresses, des numéros de téléphone ou des données personnelles provenant de dossiers médicaux. La gestion des résultats est le processus de surveillance, d'examen ou de modification des données de sortie pour garantir la qualité, l'exactitude et la sécurité. De plus, OasisGPT permet à l'utilisateur de signaler, signaler ou corriger tout résultat problématique, de fournir des commentaires et d'améliorer le système. </li>
+            </ul>
+          </span>
+          
+          <h1 class="mt-5 card-title text-bold-500">
+            Comment fonctionne OasisGPT ?
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>Le flux de travail OasisGPT est simple:</p>
+            <ul>
+              <li>Le médecin présente une brève description clinique des symptômes du patient. Pour protéger la vie privée des patients, cette description ne doit contenir aucune information personnelle identifiable.</li>
+              <li>OasisGPT traite ces informations sur les symptômes à l'aide du modèle GPT-4 pour générer une liste classée des diagnostics possibles de maladies rares pouvant correspondre à la description.</li>
+              <li>Pour chaque diagnostic suggéré, le médecin peut cliquer pour révéler les symptômes courants, les présentations cliniques typiques et les étapes de diagnostic possibles pour cette maladie.</li>
+              <li>Le médecin peut également demander à OasisGPT de fournir un raisonnement clinique pour expliquer la probabilité de chaque diagnostic suggéré.</li>
+              <li>Grâce à ces informations supplémentaires sur chaque diagnostic potentiel, le médecin peut déterminer si une évaluation plus approfondie ou une orientation vers un spécialiste est justifiée.</li>
+            </ul>
+            <p>L'objectif d'OasisGPT est de fournir une aide à la décision clinique et d'élargir la gamme de diagnostics en incluant d'éventuelles maladies rares que les médecins peuvent ne pas reconnaître immédiatement sur la base des seuls symptômes. Cependant, il n'est pas destiné à remplacer un avis médical professionnel ni à confirmer un diagnostic réel.</p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Précision du modèle actuel
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>Dans une récente évaluation préliminaire réalisée par la Fundación 29 utilisant 200 cas de patients synthétiques générés par des modèles linguistiques, OasisGPT a démontré une certaine capacité à suggérer des diagnostics corrects de maladies rares. Plus précisément, lors de l’évaluation de la précision stricte (c’est-à-dire si le bon diagnostic apparaît en première position), OasisGPT a atteint une précision de 67,5 %, obtenant le bon diagnostic dans 135 des 200 cas. Si l’on considère une métrique plus flexible, comptant les diagnostics corrects à la fois dans la première et dans les 5 premières positions, la précision augmente à 88,5 % (177 cas sur 200). Bien que ces premiers résultats soient encourageants, OasisGPT en est encore à ses premiers stades de développement.</p>
+            <p>Pour plus de détails sur la méthodologie d'évaluation et les résultats, consultez notre <a class="text-decoration-underline" href="https://github.com/foundation29org/dxgpt_testing" target="_blank" (click)="lauchEvent('dxgpt_testing')">référentiel GitHub et l'article associé.</a></p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Données techniques
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>OasisGPT est entièrement développé au sein de la plateforme de services cloud Azure de Microsoft. L'architecture exploite les services Azure OpenAI pour accéder au modèle de langage GPT-4. Tous les composants logiciels sont déployés dans des centres de données dans l'Union européenne, dans le respect de normes strictes de confidentialité et de sécurité. OasisGPT ne conserve ni ne stocke les informations personnelles identifiables des utilisateurs ou des patients. Le flux d'informations cliniques au sein d'OasisGPT est purement transactionnel, sans persistance des données, pour protéger la confidentialité. L'architecture sans serveur d'Azure permet aux ressources d'évoluer à la demande pour répondre aux exigences d'utilisation clinique, tout en minimisant les coûts opérationnels.</p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Gestion des données utilisateurs
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>OasisGPT capture uniquement les données saisies par l'utilisateur médical dans le champ de texte des symptômes, ainsi que les suggestions de diagnostic différentiel générées par le système. Les commentaires généraux des utilisateurs sur l’outil et la qualité des résultats sont également capturés. Les utilisateurs ont la possibilité de laisser un email de contact, qui sera utilisé exclusivement à des fins d'amélioration du système, jamais à des fins commerciales. Toutes les données des utilisateurs sont gérées conformément aux protocoles stricts de confidentialité de la Fundación 29 et au règlement général de l'UE sur la protection des données. Pour toute question relative au traitement des données, les utilisateurs peuvent contacter le délégué à la protection des données de la Fundación 29.</p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            C'est un projet de recherche
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <p>Dans le cadre de nos efforts d'amélioration continue et de recherche, la Fundación 29 mène un projet de recherche pour évaluer les performances et le potentiel d'OasisGPT. Ce projet est encore en développement et sous l’égide de la recherche, ce qui signifie qu’il ne s’agit pas encore d’un outil validé ou certifié pour une utilisation clinique. Nous souhaitons mesurer la précision, la convivialité et la faisabilité d'OasisGPT pour une mise en œuvre future dans des scénarios du monde réel.</p>
+            <p>Pour y parvenir, nous avons besoin de votre consentement et de votre collaboration. En utilisant OasisGPT, vous acceptez de partager vos données avec Foundation 29, l'organisation qui gère ce projet. Foundation 29 traitera vos données conformément à la réglementation GDPR et les utilisera uniquement pour améliorer le projet. Vos données ne seront pas partagées avec des tiers sans votre autorisation explicite. Vous pouvez retirer votre consentement à tout moment et demander la suppression de vos données.</p>
+            <p>De plus, vous aurez accès aux résultats de cette expérimentation, qui seront diffusés selon les principes du libre accès. Cela signifie que vous pourrez librement accéder, réutiliser et diffuser les informations générées par ce projet, à condition de citer la source et les auteurs. Nous pensons qu'il s'agit d'un moyen de promouvoir la transparence, la responsabilité et la diffusion des connaissances dans le domaine des maladies rares.</p>
+          </span>
+
+          <h1 class="mt-5 card-title text-bold-500">
+            Limites:
+            <hr class="hr-custom">
+          </h1>
+          <span class="text-left row margin-left-0 p-2">
+            <ul>
+              <li>OasisGPT est basé sur un modèle d'IA, qui présente des limites inhérentes en termes de précision et de capacité de raisonnement par rapport aux experts humains. Les suggestions peuvent être erronées ou incomplètes.</li>
+              <li>La qualité des suggestions dépend en grande partie de la représentativité de la description du symptôme. Des présentations vagues ou atypiques peuvent conduire à de mauvais résultats.</li>
+              <li>OasisGPT n'est pas connecté aux dossiers médicaux des patients ni à d'autres données objectives. Les suggestions sont basées sur la description initiale des symptômes faite par le médecin.</li>
+              <li>L'outil ne confirme pas les diagnostics, ne commande pas de tests, ne prescrit pas de traitements et ne remplace pas une évaluation clinique appropriée. Le jugement du médecin est essentiel. </li>
+            </ul>
+            <p>En résumé, OasisGPT est une aide expérimentale pour générer des suggestions de diagnostic, mais ses résultats ne doivent pas être interprétés comme des diagnostics définitifs ou des conseils médicaux. Une validation clinique adéquate reste nécessaire.</p>
+          </span>
+
+        </div>
+      </div>
+    </div>
+</div>
+</section>
