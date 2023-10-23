@@ -543,7 +543,7 @@ export class UndiagnosedPageComponent implements OnInit, OnDestroy {
                     swal.close();
                     swal({
                         type: 'error',
-                        text: 'Revise o modifique el texto que ha introducido, porque algo no le ha gustado a nuestra IA. Si después de hacerlo sigue apareciendo este mensaje, pruebe otro día para darnos tiempo a solucionarlo. Mientras tanto, puede escribir otra descripción del paciente. Si necesitas ayuda inmediata, escribe a nuestro equipo de soporte: support@foundation29.org Disculpe las molestias.',
+                        text: "Vérifiez ou modifiez le texte que vous avez saisi, car notre IA n'a pas apprécié quelque chose. Si vous obtenez toujours ce message après avoir fait cela, essayez un autre jour pour nous donner le temps de corriger le problème. En attendant, vous pouvez rédiger une autre description du patient. Si vous avez besoin d'une aide immédiate, veuillez écrire à notre équipe d'assistance : support@foundation29.org Nous sommes désolés pour la gêne occasionnée.",
                         showCancelButton: false,
                         showConfirmButton: true,
                         allowOutsideClick: false
@@ -863,7 +863,7 @@ export class UndiagnosedPageComponent implements OnInit, OnDestroy {
                     this.loadingAnswerOpenai = false;
                     swal({
                         type: 'error',
-                        text: 'Ahora mismo no podemos responder a eso. Pruebe otro día para darnos tiempo a solucionarlo. Mientras tanto, puede selecionar otra opción. Si necesitas ayuda inmediata, escribe a nuestro equipo de soporte: support@foundation29.org Disculpe las molestias.',
+                        text: "Nous ne pouvons pas répondre à cette question pour le moment. Veuillez essayer un autre jour pour nous donner le temps de régler le problème. Dans l'intervalle, vous pouvez choisir une autre option. Si vous avez besoin d'une aide immédiate, veuillez écrire à notre équipe d'assistance : support@foundation29.org Nous sommes désolés pour la gêne occasionnée.",
                         showCancelButton: false,
                         showConfirmButton: true,
                         allowOutsideClick: false
@@ -1043,7 +1043,7 @@ export class UndiagnosedPageComponent implements OnInit, OnDestroy {
             this.tienePrisa = true;
             swal({
                 type: 'warning',
-                text: 'Estamos comprobando si hay datos a anonimizar, espere unos segundos a que finalice el proceso de anonimización.',
+                text: "Nous vérifions s'il y a des données à anonymiser, attendez quelques secondes pour que le processus d'anonymisation se termine.",
                 showCancelButton: false,
                 showConfirmButton: true,
                 allowOutsideClick: false
@@ -1333,7 +1333,7 @@ export class UndiagnosedPageComponent implements OnInit, OnDestroy {
                       if (!localStorage.getItem('dontShowSwal')) {
                         swal({
                             type: 'info',
-                            html: '<p>Hemos detectado información personal en la descripción clínica que ha introducido.</p><p>Hemos procedido a eliminar esta información y guardar el texto anonimizado.</p><br><br><input type="checkbox" id="dont-show-again"> No volver a mostrar este mensaje.',
+                            html: '<p>Nous avons détecté des informations personnelles dans la description clinique que vous avez saisie.</p><p>Nous avons procédé à la suppression de ces informations et enregistré le texte anonymisé.</p><br><br><input type= "checkbox " id="dont-show-again"> Ne plus afficher ce message.',
                             showCancelButton: false,
                             showConfirmButton: true,
                             allowOutsideClick: false
@@ -1368,7 +1368,7 @@ export class UndiagnosedPageComponent implements OnInit, OnDestroy {
             if(detectedText){
                 swal({
                     type: 'success',
-                    html: '<p>El texto ha sido anonimizado correctamente.</p>',
+                    html: '<p>Le texte a été correctement anonymisé.</p>',
                     showCancelButton: false,
                     showConfirmButton: true,
                     allowOutsideClick: false
@@ -1381,7 +1381,7 @@ export class UndiagnosedPageComponent implements OnInit, OnDestroy {
             }else{
                 swal({
                     type: 'success',
-                    html: '<p>No hemos detectado información personal en la descripción clínica que ha introducido.</p>',
+                    html: "<p>Nous n'avons détecté aucune information personnelle dans la description clinique que vous avez saisie.</p>",
                     showCancelButton: false,
                     showConfirmButton: true,
                     allowOutsideClick: false
