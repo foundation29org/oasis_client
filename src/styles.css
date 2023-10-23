@@ -15,6 +15,10 @@ footer{
   text-decoration: underline !important;
 }
 
+.pointer{
+  cursor: pointer; 
+}
+
 .fijado{
   position: sticky;
   top: 80px;
