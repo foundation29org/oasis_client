@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from "./shared/shared.module";
 import { CustomModule } from "./layouts/land-page/custom.module";
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -23,6 +23,7 @@ import { EventsService} from 'app/shared/services/events.service';
 import { DialogService } from 'app/shared/services/dialog.service';
 import { Data} from 'app/shared/services/data.service';
 import { environment } from 'environments/environment';
+import { AuthInterceptor } from './shared/auth/auth.interceptor';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, environment.serverapi+'/assets/i18n/', '.json');
@@ -52,7 +53,11 @@ export function createTranslateLoader(http: HttpClient) {
 
     ],
     providers: [
-        //Toastr and auth providers
+        {
+            provide : HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi   : true
+        },
         { provide: ToastOptions, useClass: CustomOption },
         DatePipe,
         DateService,
